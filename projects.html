@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Chehak Khera</title>
+<meta name="description" content="Chehak Khera's projects with live interactive demos: India VIX forecasting (ARIMA + ANN), Dabur India DCF valuation and a working retirement corpus calculator.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projects — Chehak Khera">
+<meta property="og:description" content="India VIX forecasting · Dabur India valuation · Retirement planning calculator — as live interactive demos.">
+<meta property="og:image" content="images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body data-page="projects">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="aurora" aria-hidden="true"></div>
+<canvas id="bg-particles" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <a class="brand" href="index.html"><span class="brand-mark">CK</span>Chehak Khera</a>
+  <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+    <a href="index.html" data-page="home">Profile</a>
+    <a href="experience.html" data-page="experience">Experience</a>
+    <a href="projects.html" data-page="projects">Projects</a>
+    <a href="achievements.html" data-page="achievements">Achievements</a>
+    <a href="contact.html" data-page="contact">Contact</a>
+  </nav>
+  <a class="btn btn-primary btn-small nav-cta" href="assets/Chehak_Khera_Resume.pdf" download>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Resume
+  </a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+  </button>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <p class="eyebrow reveal">Selected work</p>
+    <h1 class="page-title reveal d1">Projects you can <span class="grad-text">actually touch</span></h1>
+    <p class="page-sub reveal d2">Not bullet points — each project is rebuilt here as a live, interactive demo of the underlying idea.</p>
+
+    <h2 class="sr-only">Projects</h2>
+    <section class="glass tilt proj reveal" aria-label="India VIX forecasting project">
+      <div class="proj-head">
+        <h3>India VIX Forecasting</h3>
+        <span class="p-tools">PYTHON · ARIMA · ANN</span>
+      </div>
+      <p class="p-desc">Built ARIMA and artificial-neural-network models in Python to forecast market volatility, benchmarking statistical against machine-learning approaches on India VIX data.</p>
+      <div class="chart-frame">
+        <div id="vix-chart"></div>
+        <div class="legend">
+          <span><i style="background:#2dd4bf;"></i>India VIX (history)</span>
+          <span><i style="background:#a78bfa;"></i>Model forecast</span>
+          <span><i style="background:rgba(167,139,250,0.35);height:10px;border-radius:3px;"></i>Confidence band</span>
+        </div>
+      </div>
+      <p class="demo-note">Interactive demo · illustrative data, not the study output</p>
+    </section>
+
+    <section class="glass tilt proj reveal" aria-label="Dabur India valuation project">
+      <div class="proj-head">
+        <h3>Dabur India — Intrinsic Valuation</h3>
+        <span class="p-tools">DCF · RELATIVE VALUATION</span>
+      </div>
+      <p class="p-desc">Performed discounted-cash-flow and relative valuation to estimate intrinsic value — triangulating DCF output against peer multiples, the way a research desk builds a football field.</p>
+      <div class="chart-frame">
+        <div id="ff-chart"></div>
+      </div>
+      <p class="demo-note">Interactive demo · illustrative ranges, not the study output</p>
+    </section>
+
+    <section class="glass proj reveal" id="calc" aria-label="Retirement planning calculator">
+      <div class="proj-head">
+        <h3>Retirement Planning Calculator</h3>
+        <span class="p-tools">EXCEL MODEL · REBUILT FOR WEB</span>
+      </div>
+      <p class="p-desc">An automated Excel model for retirement corpus projections — reimagined here as a working calculator. Drag the sliders; the corpus updates live.</p>
+      <div class="calc">
+        <div class="calc-controls">
+          <label for="in-age">Current age <output id="lab-age">25 yrs</output></label>
+          <input type="range" id="in-age" min="18" max="50" step="1" value="25">
+          <label for="in-retire">Retirement age <output id="lab-retire">60 yrs</output></label>
+          <input type="range" id="in-retire" min="45" max="70" step="1" value="60">
+          <label for="in-sip">Monthly investment <output id="lab-sip">₹20,000/mo</output></label>
+          <input type="range" id="in-sip" min="1000" max="200000" step="1000" value="20000">
+          <label for="in-return">Expected annual return <output id="lab-return">12.0% p.a.</output></label>
+          <input type="range" id="in-return" min="6" max="16" step="0.5" value="12">
+          <label for="in-savings">Current savings <output id="lab-savings">₹2.0 L</output></label>
+          <input type="range" id="in-savings" min="0" max="5000000" step="50000" value="200000">
+        </div>
+        <div class="calc-result" aria-live="polite">
+          <div class="cr-lbl">Projected corpus at retirement</div>
+          <div class="cr-num grad-text" id="out-corpus">—</div>
+          <div class="cr-sub">Invested <b id="out-invested">—</b> · Growth <b id="out-growth">—</b></div>
+        </div>
+      </div>
+      <p class="demo-note">Compounding maths, live in the browser · not financial advice</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <span>© <span id="year">2026</span> Chehak Khera</span>
+    <div class="foot-links">
+      <a href="mailto:chehak0107@gmail.com">chehak0107@gmail.com</a>
+      <a href="https://www.linkedin.com/in/chehak-khera-6b0392237" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="assets/Chehak_Khera_Resume.pdf" download>Resume PDF</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+<script src="js/charts.js"></script>
+</body>
+</html>

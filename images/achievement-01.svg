@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1524"/><stop offset="1" stop-color="#0e3b35"/></linearGradient></defs>
+  <rect width="800" height="640" fill="url(#g)"/>
+  <circle cx="660" cy="110" r="220" fill="none" stroke="rgba(45,212,191,0.14)" stroke-width="1.5"/>
+  <circle cx="660" cy="110" r="150" fill="none" stroke="rgba(45,212,191,0.09)" stroke-width="1.5"/>
+  <text x="36" y="130" font-family="Courier New, monospace" font-size="120" font-weight="bold" fill="rgba(255,255,255,0.05)">01</text>
+  <g transform="translate(340,190) scale(5)" stroke="#2dd4bf" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/>
+    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+  </g>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="600" fill="#e9edf5">University Topper</text>
+  <text x="400" y="518" text-anchor="middle" font-family="Courier New, monospace" font-size="17" fill="rgba(233,237,245,0.55)" letter-spacing="3">B.COM (HONS.) · 94.1% · 2023</text>
+</svg>

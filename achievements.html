@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achievements — Chehak Khera</title>
+<meta name="description" content="Chehak Khera's achievements gallery: university topper medal, actuarial exam milestones, NISM-XA certification and leadership highlights — filterable and full-screen.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Achievements — Chehak Khera">
+<meta property="og:description" content="University topper · Actuarial exams CB1 CB2 CS1 · NISM-XA · Leadership — in a full-screen gallery.">
+<meta property="og:image" content="images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body data-page="achievements">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="aurora" aria-hidden="true"></div>
+<canvas id="bg-particles" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <a class="brand" href="index.html"><span class="brand-mark">CK</span>Chehak Khera</a>
+  <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+    <a href="index.html" data-page="home">Profile</a>
+    <a href="experience.html" data-page="experience">Experience</a>
+    <a href="projects.html" data-page="projects">Projects</a>
+    <a href="achievements.html" data-page="achievements">Achievements</a>
+    <a href="contact.html" data-page="contact">Contact</a>
+  </nav>
+  <a class="btn btn-primary btn-small nav-cta" href="assets/Chehak_Khera_Resume.pdf" download>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Resume
+  </a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+  </button>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <p class="eyebrow reveal">Wall of proof</p>
+    <h1 class="page-title reveal d1">Achievements, <span class="grad-text">on display</span></h1>
+    <p class="page-sub reveal d2">Medals, certifications and leadership moments. Filter by category — tap any tile to view it full-screen.</p>
+
+    <div class="filter-bar reveal d2" role="group" aria-label="Filter achievements">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="academics" aria-pressed="false">Academics</button>
+      <button class="filter-btn" data-filter="certifications" aria-pressed="false">Certifications</button>
+      <button class="filter-btn" data-filter="leadership" aria-pressed="false">Leadership</button>
+    </div>
+
+    <section id="gallery" class="gallery reveal d3" aria-label="Achievements gallery"></section>
+  </div>
+</main>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Achievement viewer">
+  <button class="lb-btn lb-close" aria-label="Close viewer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="lb-btn lb-prev" aria-label="Previous achievement">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="lb-btn lb-next" aria-label="Next achievement">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="lb-img-wrap"><img src="" alt=""></div>
+  <div class="lb-cap">
+    <div class="lb-title"></div>
+    <div class="lb-sub"></div>
+  </div>
+  <div class="lb-count"></div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <span>© <span id="year">2026</span> Chehak Khera</span>
+    <div class="foot-links">
+      <a href="mailto:chehak0107@gmail.com">chehak0107@gmail.com</a>
+      <a href="https://www.linkedin.com/in/chehak-khera-6b0392237" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="assets/Chehak_Khera_Resume.pdf" download>Resume PDF</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1524"/><stop offset="1" stop-color="#4a3a14"/></linearGradient></defs>
+  <rect width="800" height="640" fill="url(#g)"/>
+  <circle cx="660" cy="110" r="220" fill="none" stroke="rgba(232,193,90,0.16)" stroke-width="1.5"/>
+  <circle cx="660" cy="110" r="150" fill="none" stroke="rgba(232,193,90,0.1)" stroke-width="1.5"/>
+  <text x="36" y="130" font-family="Courier New, monospace" font-size="120" font-weight="bold" fill="rgba(255,255,255,0.05)">03</text>
+  <g transform="translate(340,190) scale(5)" stroke="#e8c15a" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+  </g>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="600" fill="#e9edf5">Alumni Meet — Lead Organizer</text>
+  <text x="400" y="518" text-anchor="middle" font-family="Courier New, monospace" font-size="17" fill="rgba(233,237,245,0.55)" letter-spacing="3">100+ ALUMNI &amp; FACULTY · AJNIFM · 2025</text>
+</svg>

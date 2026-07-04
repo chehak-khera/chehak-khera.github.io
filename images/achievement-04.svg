@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1524"/><stop offset="1" stop-color="#2a1f55"/></linearGradient></defs>
+  <rect width="800" height="640" fill="url(#g)"/>
+  <circle cx="660" cy="110" r="220" fill="none" stroke="rgba(167,139,250,0.16)" stroke-width="1.5"/>
+  <circle cx="660" cy="110" r="150" fill="none" stroke="rgba(167,139,250,0.1)" stroke-width="1.5"/>
+  <text x="36" y="130" font-family="Courier New, monospace" font-size="120" font-weight="bold" fill="rgba(255,255,255,0.05)">04</text>
+  <g transform="translate(340,190) scale(5)" stroke="#a78bfa" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 7V4H6l6 8-6 8h12v-3"/>
+  </g>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="600" fill="#e9edf5">Actuarial Exams CB1 · CB2 · CS1</text>
+  <text x="400" y="518" text-anchor="middle" font-family="Courier New, monospace" font-size="17" fill="rgba(233,237,245,0.55)" letter-spacing="3">INSTITUTE OF ACTUARIES · 2023</text>
+</svg>
