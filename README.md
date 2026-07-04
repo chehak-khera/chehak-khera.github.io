@@ -2,6 +2,8 @@
 
 Futuristic dark-glassmorphism personal promotion site. Pure HTML/CSS/JS — no build step, no framework, free to host anywhere static files are served.
 
+**Live:** https://chehak-khera.github.io/ (GitHub Pages, deploys from `main` / root).
+
 ## Pages
 
 | Page | What's on it |
@@ -24,10 +26,7 @@ Tile → subject mapping lives at the top of `js/gallery.js` (`ACHIEVEMENTS` arr
 2. Repo Settings → Pages → deploy from branch `main`, folder `/`.
 3. Site goes live at `https://<account>.github.io/<repo>/`.
 
-After deploying, update two things:
-
-- `SITE_URL` in the inline script at the bottom of `contact.html` (regenerates the QR code).
-- `og:image` meta tags — replace the relative `images/og-image.png` with the absolute deployed URL so LinkedIn/WhatsApp previews work. If `og-image.png` is missing, export it from `images/og-image.svg` at 1200×630.
+Already wired for the live URL above: `SITE_URL` in the `contact.html` QR script points at it, and the `og:image` tags use the absolute `https://chehak-khera.github.io/images/og-image.jpg` (a 1200×630 raster generated from `images/og-image.svg`) so LinkedIn/WhatsApp previews render. If the site ever moves to a different URL, update those two spots and re-export `og-image.jpg` from the SVG.
 
 Cloudflare Pages / Netlify also work: drag-and-drop this folder in their dashboard.
 
