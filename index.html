@@ -18,12 +18,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
-<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}#intro{display:none !important}</style></noscript>
 </head>
 <body data-page="home">
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="aurora" aria-hidden="true"></div>
 <canvas id="bg-particles" aria-hidden="true"></canvas>
+
+<div id="intro" class="intro" aria-hidden="true">
+  <div class="intro-inner">
+    <div class="intro-photo"><img src="images/chehak.jpg" alt=""></div>
+    <p class="intro-hi">Hi, I'm</p>
+    <div class="intro-name">Chehak <span class="grad-text">Khera</span></div>
+    <p class="intro-welcome">Welcome to my profile</p>
+  </div>
+  <button class="intro-skip" type="button">SKIP INTRO →</button>
+</div>
 
 <header class="nav">
   <a class="brand" href="index.html"><span class="brand-mark">CK</span>Chehak Khera</a>
@@ -46,18 +56,29 @@
 <main id="main">
   <div class="wrap">
     <section class="hero">
-      <div class="hero-badge reveal"><span class="pulse" aria-hidden="true"></span>Open to opportunities · Finance</div>
-      <h1 class="reveal d1">Chehak <span class="grad-text">Khera</span></h1>
-      <p class="hero-sub reveal d2">MBA Finance candidate at <b>AJNIFM</b> working at the intersection of <b>markets</b>, <b>risk</b> and <b>research</b> — university topper, three actuarial exams cleared, NISM-XA certified investment adviser (L1).</p>
-      <div class="hero-ctas reveal d3">
-        <a class="btn btn-primary" href="achievements.html">
-          View Achievements
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a class="btn btn-ghost" href="assets/Chehak_Khera_Resume.pdf" download>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download Resume
-        </a>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badge reveal"><span class="pulse" id="mktDot" aria-hidden="true"></span><span id="mktText">Open to opportunities · Finance</span></div>
+          <h1 class="reveal d1">Hi, I'm <span class="grad-text">Chehak Khera</span></h1>
+          <p class="typed-line reveal d2" aria-label="Focused on equity research, volatility modelling, commodity markets, risk analysis and DCF valuation"><span aria-hidden="true">focused on <span id="typedRole">equity research</span></span></p>
+          <p class="hero-sub reveal d2">Welcome to my profile — I'm an MBA Finance candidate at <b>AJNIFM</b> working at the intersection of <b>markets</b>, <b>risk</b> and <b>research</b>. University topper, three actuarial exams cleared, NISM-XA certified investment adviser (L1).</p>
+          <div class="hero-ctas reveal d3">
+            <a class="btn btn-primary" href="achievements.html">
+              View Achievements
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="assets/Chehak_Khera_Resume.pdf" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual reveal d2" id="heroPhotoCard">
+          <div class="photo-frame tilt"><img src="images/chehak.jpg" alt="Portrait of Chehak Khera"></div>
+          <span class="float-chip fc-1"><b>94.1%</b> UNIVERSITY TOPPER</span>
+          <span class="float-chip fc-2"><b>CB1 · CB2 · CS1</b> CLEARED</span>
+          <span class="float-chip fc-3"><b>NISM-XA</b> CERTIFIED</span>
+        </div>
       </div>
     </section>
   </div>

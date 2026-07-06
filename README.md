@@ -14,6 +14,10 @@ Futuristic dark-glassmorphism personal promotion site. Pure HTML/CSS/JS — no b
 | `achievements.html` | Filterable bento gallery + full-screen lightbox (keyboard & swipe) |
 | `contact.html` | Contact card, QR code to the site, resume download |
 
+## Chehak's photo (intro + navbar + hero)
+
+`images/chehak.jpg` powers three things on the home page: the full-screen intro ("Hi, I'm Chehak Khera — welcome to my profile") whose big photo then flies into the top-left navbar avatar, the navbar avatar on every page, and the hero portrait card with floating credential chips. If the file is missing, everything degrades silently — the intro auto-skips, the navbar keeps the CK monogram, and the hero card hides. A roughly square portrait works best (it's cropped with `object-fit: cover`). The intro plays once per browser session and is skippable (click, Esc/Enter, or the SKIP button); it's disabled for reduced-motion users.
+
 ## Replacing the placeholder images with real photos
 
 Drop photos into `images/` named `achievement-01.jpg` … `achievement-09.jpg` (any aspect ratio; they're cropped with `object-fit: cover`). **No code changes needed** — each tile tries the `.jpg` first and falls back to the shipped `.svg` placeholder only if the photo is missing.
