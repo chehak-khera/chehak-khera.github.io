@@ -12,7 +12,11 @@ Futuristic dark-glassmorphism personal promotion site. Pure HTML/CSS/JS — no b
 | `experience.html` | Glowing career timeline, education, certifications, skills |
 | `projects.html` | Live demos: India VIX forecast chart, Dabur valuation football field, working retirement calculator |
 | `achievements.html` | Filterable bento gallery + full-screen lightbox (keyboard & swipe) |
-| `contact.html` | Contact card, QR code to the site, resume download |
+| `contact.html` | Contact card (email, LinkedIn, resume), "Send a message" popup, QR code to the site |
+
+## Contact popup
+
+No phone number is published anywhere on the site or in the resume PDF — email only, for privacy. The "Send a message" button on `contact.html` opens an accessible popup (Name / Email / Message, focus-trapped, Escape/backdrop-click to close). On submit it builds a `mailto:` link to chehak0107@gmail.com and opens the visitor's own email app with everything pre-filled — there's no backend or third-party form service, so nothing is sent from the page itself. The popup shows a fallback message with a direct mailto link in case the visitor's browser has no mail client configured.
 
 ## Chehak's photo (intro + navbar + hero)
 

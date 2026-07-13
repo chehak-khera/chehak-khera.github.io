@@ -353,4 +353,70 @@
       b.addEventListener('pointerleave', function(){ b.style.transform = ''; });
     });
   }
+
+  /* ---------- contact modal (mailto) ---------- */
+  var cmTrigger = document.getElementById('contactModalTrigger');
+  var cmModal = document.getElementById('contactModal');
+  if(cmTrigger && cmModal){
+    var cmForm = document.getElementById('contactForm');
+    var cmFallback = document.getElementById('cmFallback');
+    var cmLastFocus = null;
+
+    function cmFocusables(){
+      var els = cmModal.querySelectorAll('button, [href], input, textarea, [tabindex]:not([tabindex="-1"])');
+      return Array.prototype.filter.call(els, function(el){ return !el.disabled && el.offsetParent !== null; });
+    }
+    function openContactModal(){
+      cmLastFocus = document.activeElement;
+      cmModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      var nameField = document.getElementById('cmName');
+      if(nameField) nameField.focus();
+    }
+    function closeContactModal(){
+      cmModal.classList.remove('open');
+      document.body.style.overflow = '';
+      if(cmForm){ cmForm.reset(); cmForm.style.display = ''; }
+      if(cmFallback) cmFallback.hidden = true;
+      if(cmLastFocus) cmLastFocus.focus();
+    }
+
+    cmTrigger.addEventListener('click', openContactModal);
+    document.getElementById('cmClose').addEventListener('click', closeContactModal);
+    cmModal.addEventListener('click', function(e){ if(e.target === cmModal) closeContactModal(); });
+    var cmReset = document.getElementById('cmReset');
+    if(cmReset) cmReset.addEventListener('click', function(){
+      if(cmForm){ cmForm.reset(); cmForm.style.display = ''; }
+      if(cmFallback) cmFallback.hidden = true;
+      var nameField = document.getElementById('cmName');
+      if(nameField) nameField.focus();
+    });
+
+    document.addEventListener('keydown', function(e){
+      if(!cmModal.classList.contains('open')) return;
+      if(e.key === 'Escape'){ closeContactModal(); return; }
+      if(e.key !== 'Tab') return;
+      var focusables = cmFocusables();
+      if(!focusables.length) return;
+      var first = focusables[0], last = focusables[focusables.length - 1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+      else if(!cmModal.contains(document.activeElement)){ e.preventDefault(); first.focus(); }
+    });
+
+    if(cmForm) cmForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = document.getElementById('cmName').value.trim();
+      var email = document.getElementById('cmEmail').value.trim();
+      var message = document.getElementById('cmMessage').value.trim();
+      var subject = 'Portfolio message from ' + name;
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+      var mailto = 'mailto:chehak0107@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      window.location.href = mailto;
+      cmForm.style.display = 'none';
+      cmFallback.hidden = false;
+      var fallbackLink = document.querySelector('.cm-fallback-link');
+      if(fallbackLink) fallbackLink.focus();
+    });
+  }
 })();

@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Chehak Khera</title>
-<meta name="description" content="Contact Chehak Khera — open to roles in equity research, risk analysis and commodity markets. Email, phone, LinkedIn and downloadable resume.">
+<meta name="description" content="Contact Chehak Khera — open to roles in equity research, risk analysis and commodity markets. Email, message form, LinkedIn and downloadable resume.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contact — Chehak Khera">
-<meta property="og:description" content="Open to roles in equity research, risk and commodity markets. Email · Phone · LinkedIn · Resume.">
+<meta property="og:description" content="Open to roles in equity research, risk and commodity markets. Email · Message · LinkedIn · Resume.">
 <meta property="og:url" content="https://chehak-khera.github.io/contact.html">
 <meta property="og:image" content="https://chehak-khera.github.io/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -55,10 +55,10 @@
           <span class="c-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
           <span><span class="c-lbl">Email</span><br><span class="c-val">chehak0107@gmail.com</span></span>
         </a>
-        <a class="c-row" href="tel:+918595833665">
-          <span class="c-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-          <span><span class="c-lbl">Phone</span><br><span class="c-val">+91 85958 33665</span></span>
-        </a>
+        <button type="button" class="c-row" id="contactModalTrigger" aria-haspopup="dialog">
+          <span class="c-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+          <span><span class="c-lbl">Message</span><br><span class="c-val">Send a message</span></span>
+        </button>
         <a class="c-row" href="https://www.linkedin.com/in/chehak-khera-6b0392237" target="_blank" rel="noopener">
           <span class="c-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
           <span><span class="c-lbl">LinkedIn</span><br><span class="c-val">Chehak Khera</span></span>
@@ -90,6 +90,42 @@
     </div>
   </div>
 </main>
+
+<div id="contactModal" class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="cmTitle">
+  <div class="contact-modal-card glass">
+    <button type="button" class="lb-btn cm-close" id="cmClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <h2 id="cmTitle" class="cm-title">Send a message</h2>
+    <p class="cm-sub">Fill this in — it opens your email app with everything ready to send to Chehak.</p>
+
+    <form id="contactForm" novalidate>
+      <div class="cm-field">
+        <label for="cmName">Your name</label>
+        <input type="text" id="cmName" name="name" autocomplete="name" required>
+      </div>
+      <div class="cm-field">
+        <label for="cmEmail">Your email</label>
+        <input type="email" id="cmEmail" name="email" autocomplete="email" required>
+      </div>
+      <div class="cm-field">
+        <label for="cmMessage">Message</label>
+        <textarea id="cmMessage" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary cm-submit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Open Email to Send
+      </button>
+      <p class="cm-note">Opens your default email app, addressed to chehak0107@gmail.com — nothing is sent from this page.</p>
+    </form>
+
+    <div id="cmFallback" class="cm-fallback" hidden>
+      <p>Opening your email app… if nothing happened, email directly:</p>
+      <a class="cm-fallback-link" href="mailto:chehak0107@gmail.com">chehak0107@gmail.com</a>
+      <button type="button" class="btn btn-ghost btn-small" id="cmReset" style="width:100%;">Send another message</button>
+    </div>
+  </div>
+</div>
 
 <footer>
   <div class="foot-inner">
